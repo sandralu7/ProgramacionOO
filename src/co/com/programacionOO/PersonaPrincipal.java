@@ -11,10 +11,22 @@ public class PersonaPrincipal {
 		persona.setNombre("Juan");
 		persona.setApellido("Perez");
 
+	
+		Persona persona2 = new Persona (6523972, "María", "Sanchez", 1990);
 		
-		System.out.println("Nombre de la persona " + persona.getNombre() + " " + persona.getApellido());
-		System.out.println("La edad de la persona " + persona.calcularEdad());
-		System.out.println("La persona es " + persona.mayorEdad());
+		
+		Persona persona3 = new Persona ("Pedro", "Hernandez");
+		Persona persona4 = new Persona ();
+		
+		
+		Persona [] personas = {persona, persona2, persona3, persona4};
+		for (int i=0; i<personas.length; i++) {
+			System.out.println("Nombre de la persona "+ i +" "+ personas[i].getNombre() + " " + personas[i].getApellido());
+			System.out.println("La edad de la persona "+ i +" "+ personas[i].calcularEdad());
+			System.out.println("La persona es "+ i +" " + personas[i].mayorEdad());
+			System.out.println("La identificación de persona "+i +" " + personas[i].getIdentificacion());
+			
+		}
 		
 		
 

@@ -7,14 +7,16 @@ public class Persona {
 	private String apellido;
 	private int anioNacimiento;
 	
-	public long getIdentificacion () {
+	
+	
+	public long getIdentificacion() {
 		return identificacion;
 	}
-	
-	public void setIdentificacion (long identificacion) {
+
+	public void setIdentificacion(long identificacion) {
 		this.identificacion = identificacion;
 	}
-	
+
 	public String getNombre () {
 		return nombre;
 	}
@@ -61,9 +63,22 @@ public class Persona {
 		this.apellido = apellido;
 		this.anioNacimiento = anioNacimiento;
 	}
+	
+	public Persona(String nombre, String apellido) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
 
 	public Persona() {
-		
+		this.identificacion = 0;
+		this.nombre ="";
+		this.apellido = "";
+		this.anioNacimiento= 1950;
+	}
+	
+	public String toString() {
+		return "La persona con identificación " + identificacion + ", tiene el nombre de " 
+				+ nombre + " " + apellido + ", tiene " + calcularEdad() + " años y es " + mayorEdad();
 	}
 
 }
